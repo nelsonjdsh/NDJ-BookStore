@@ -1,0 +1,24 @@
+{
+  "name": "ndj-bookstore",
+  "version": "1.0.0",
+  "description": "- [Instrucciones en Español](README_ES.md) - [Instructions in English](README_EN.md)",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd Book-Store.Presentation/book-store.web-api && npm run start:dev",
+    "client": "cd Book-Store.Presentation/Book-Store.FrontEnd && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsonjdsh/NDJ-BookStore.git"
+  },
+  "author": "Nelson D. Jesus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonjdsh/NDJ-BookStore/issues"
+  },
+  "homepage": "https://github.com/nelsonjdsh/NDJ-BookStore#readme",
+  "devDependencies": {
+    "concurrently": "^7.4.0"
+  }
+}

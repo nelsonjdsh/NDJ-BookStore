@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const App = () => {
+  const styles = {
+    pageTitle: {
+      fontSize: '2rem',
+    },
+  };
   return (
     <div style={{ height: '100%' }}>
-      <h2 style={{ fontSize: '2rem' }}>Welcome to NDJ BookStore!</h2>
+      <h2 style={styles.pageTitle}>Welcome to NDJ BookStore!</h2>
       <p>
         This React Applications allows you to get all the available books in the
         store and access book's details with just a few clicks!
@@ -29,6 +35,9 @@ const App = () => {
           </li>
         </ul>
       </ul>
+      <Link className="navbar-brand" to="/createBook">
+        <button className="btn btn-primary">Create Book</button>
+      </Link>
     </div>
   );
 };

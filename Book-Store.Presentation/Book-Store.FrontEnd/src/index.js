@@ -5,7 +5,8 @@ import App from './App';
 import { Books } from './components/Books/Books';
 import { BookDetails } from './components/BookDetails/BookDetails';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import 'bootswatch/dist/journal/bootstrap.min.css';
+import NewBooks from './components/NewBook/NewBook';
+import 'bootswatch/dist/darkly/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
       <div className="container pt-4">
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/createBook" element={<NewBooks />} />
           <Route path="/books" element={<Books />} />
           <Route path="/book/details/:id" element={<BookDetails />} />
         </Routes>
