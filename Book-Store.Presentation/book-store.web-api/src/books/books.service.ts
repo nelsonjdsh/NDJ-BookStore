@@ -18,7 +18,12 @@ export class BooksService {
   ) {}
 
   async getMany() {
-    const bookData = await this.BookRepository.find({ relations: ['pages'] });
+    const bookData = await this.BookRepository.find({
+      relations: ['pages'],
+      order: {
+        createdAt: 'DESC',
+      },
+    });
     if (!bookData) return { message: 'No Books to Show.' };
     return {
       message: 'Success',

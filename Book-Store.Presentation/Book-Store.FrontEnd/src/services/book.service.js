@@ -2,7 +2,7 @@ import api from '../utils/http-common';
 
 class BookService {
   async getBooks() {
-    return await api.get('/books').then((response) => {
+    return api.get('/books').then((response) => {
       let data = response.data.bookData;
       return data;
     });
@@ -13,7 +13,7 @@ class BookService {
       url: `/books/book?id=${id}`,
     };
     console.log({ options });
-    return await api
+    return api
       .get(`/books/book?id=${id}`)
       .then((response) => {
         console.log(response);
@@ -24,12 +24,29 @@ class BookService {
         console.log({ e });
       });
   }
+
+  async createBook(book) {
+    const options = {
+      url: `/books/newBook`,
+      data: book,
+    };
+    await api
+      .post(options.url, options.data)
+      .then((response) => {
+        console.log({ response });
+        return response;
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
   async getBookByName(name) {
     let options = {
       url: '/books',
       query: name,
     };
-    return await api.get(options).then((response) => {
+    return api.get(options).then((response) => {
       console.log(response);
       let data = response.data.bookData;
       return data;

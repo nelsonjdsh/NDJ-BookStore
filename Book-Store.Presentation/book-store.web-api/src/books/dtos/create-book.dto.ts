@@ -25,7 +25,7 @@ export class CreateBookDto {
   year: string;
 
   @IsString()
-  @Length(10, 20)
+  @Length(1, 20)
   edition: string;
 
   num_pages?: number;

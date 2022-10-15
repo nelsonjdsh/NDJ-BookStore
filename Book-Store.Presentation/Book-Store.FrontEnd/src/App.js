@@ -35,8 +35,8 @@ const App = () => {
           </li>
         </ul>
       </ul>
-      <Link className="navbar-brand" to="/createBook">
-        <button className="btn btn-primary">Create Book</button>
+      <Link to="/createBook">
+        <button className="btn btn-primary p-3">Create Book</button>
       </Link>
     </div>
   );

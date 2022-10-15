@@ -53,17 +53,12 @@ export const BookDetails = (props) => {
               }}
             >
               {/* <p style={{ color: 'black' }}>{index}</p> */}
-              <p style={{ color: 'black' }}>{x.page_content}</p>
+              <p style={{ color: 'black' }} key={x.id}>
+                {x.page_content}
+              </p>
             </div>
           ))}
-          {/* {book.pages.map((page, i) => {
-            console.log(i);
-            return (
-              <div style={{ backgroundColor: '#f3f3' }}>
-                <p style={{ color: '#fff' }}>{page.page_content}</p>
-              </div>
-            );
-          })} */}
+
           <button
             style={{
               width: '100px',
