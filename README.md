@@ -22,7 +22,7 @@ NDJ store and access book's details with just a few clicks!
 ## Installation & Setting Up
 
 ```
-- git clone https://gitlab.com/gbh-candidates/nelson-de-jesus-santos-hidalgo-nelsonjdsh-2022-10-3-library-api-js.git
+- git clone https://github.com/nelsonjdsh/NDJ-BookStore.git
 - git checkout develop
 - cd nelson-de-jesus-santos-hidalgo-nelsonjdsh-2022-10-3-library-api-js
 ```
